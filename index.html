@@ -1,123 +1,362 @@
 <!DOCTYPE html>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-  hi
--->
-<html>
-  <head>
-    <title>Madhuri Mattaparthy </title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhuri Mattaparthy's Portfolio</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      h1 {
-        letter-spacing: 3px; /* Adjust the value as needed */
-      }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #0f1419;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        /* Header Navigation */
+        .header {
+            background-color: #1a2332;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #888;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #4a9eff;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons a {
+            color: #888;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #4a9eff;
+        }
+
+        /* Main Content */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 4rem;
+            padding: 3rem 2rem;
+        }
+
+        .content {
+            max-width: 800px;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #fff;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+
+        .contact-label {
+            color: #4a9eff;
+            text-decoration: none;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            color: #c0c0c0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: #fff;
+            margin: 3rem 0 1.5rem 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-content {
+            color: #c0c0c0;
+            margin-bottom: 2rem;
+        }
+
+        .section-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            padding-top: 2rem;
+        }
+
+        .sidebar-title {
+            font-size: 1rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar-links {
+            list-style: none;
+        }
+
+        .sidebar-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar-links a {
+            color: #4a9eff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar-links a:hover {
+            color: #66b3ff;
+        }
+
+        /* Links Section */
+        .links-section {
+            margin-top: 3rem;
+        }
+
+        .links-grid {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+        }
+
+        .link-item a {
+            color: #4a9eff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .link-item a:hover {
+            color: #66b3ff;
+        }
+
+        .link-description {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .main-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem 1rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .social-icons {
+                display: none;
+            }
+        }
     </style>
-    <noscript
-      ><link rel="stylesheet" href="assets/css/noscript.css"
-    /></noscript>
-  </head>
-  <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper" class="fade-in">
-      <!-- Intro -->
-      <div id="intro">
-        <h1 style="font-family: 'Calibri', sans-serif">
-          Madhuri Mattaparthy <br />
-        </h1>
-        <p>
-          Machine Learning Engineer and Data enthusiast where I would love to solve real world challenging problems
-          <p>Visit my GitHub profile: <a href="https://github.com/madhuri444">@madhuri444</a></p>
-        </p>
-        <ul class="actions">
-          <li>
-            <a
-              href="#header"
-              class="button icon solid solo fa-arrow-down scrolly"
-              >Continue</a
-            >
-          </li>
-        </ul>
-      </div>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">Madhuri Mattaparthy's Portfolio</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Journey</a></li>
+                    <li><a href="#">Writing</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="#">🐙</a>
+                <a href="#">💼</a>
+                <a href="#">📧</a>
+                <a href="#">🔍</a>
+            </div>
+        </div>
+    </header>
 
-      <!-- Header -->
-      <header id="header">
-        <a href="index.html" class="logo">My Intro</a>
-      </header>
-
-      <!-- Nav -->
-      <nav id="nav">
-        <ul class="links">
-          <li class="active"><a href="index.html">Projects</a></li>
-          <li><a href="generic.html">About me</a></li>
-          <li><a href="elements.html">Certifications</a></li>
-        
-      </nav>
-
-      <!-- Main -->
-      <div id="main">
-        <!-- Featured Post -->
-        <article class="post featured">
-          <header class="major">
+    <div class="main-container">
+        <main class="content">
+            <h1 class="page-title">Madhuri Mattaparthy's Portfolio</h1>
             
-            <h2><a href="#"> Movie Recommendation system <br />
-			</a></h2>
-            <p>
-              I created a movie buddy that knows what you like! It uses special tools to look at what you've watched and suggests new movies just for you. With a big database of movies, it's like having a personal movie expert. I get to give you recommendations, help you find new favorites, and explore new genres. It's like having your own movie adventure!
+            <div class="contact-info">
+                <a href="mailto:madhurimattaparthy@gmail.com" class="contact-label">Contact:</a> madhurimattaparthy@gmail.com
+            </div>
 
-            </p>
-            <p>
-                My Process: Building a Movie Recommendation System<br />
-                I started by collecting a vast movie dataset from Kaggle, which became the backbone of my system. 
-                Next, I employed NLP techniques and Count Vectorizer to analyze user preferences and viewing history. 
-                I then trained machine learning algorithms to generate personalized movie recommendations. 
-                After refining my model, I built a user-friendly web interface for easy navigation. 
-                Through rigorous testing and iteration, I fine-tuned my system to provide accurate and exciting movie suggestions.
-            </p>
-    
-            </h2>
-          </header>
-          <a href="#" class="image main"
-            ><img src="images/movie.jpg" alt=""
-          /></a>
-          <ul class="actions special">
-            <li><a href="https://github.com/madhuri444/MovieRecommenderSys" class="button large">View Project</a></li>
-          </ul>
-        </article>
+            <div class="intro-text">
+                Welcome to my portfolio! Here you'll find information about my journey from electrical engineering to AI/ML and the projects I've been working on. If anything here interests you, I'd love to hear from you!
+            </div>
 
-		<article class="post featured 2">
-			<header class="major 2">
-			  
-			  <h2><a href="#"> Emotion Detection Using CNN <br />
-			  </a></h2>
-			  <p>In this project we build dashboards on the data</p>
-	  
-			  </h2>
-			</header>
-			<a href="#" class="image main"
-			  ><img src="images/Emotion.jpg" alt=""
-			/></a>
-			<ul class="actions special">
-			  <li><a href="https://github.com/madhuri444/index" class="button large">View Project</a></li>
-			</ul>
-		  </article>
+            <section>
+                <h2 class="section-title">My Story</h2>
+                <div class="section-content">
+                    <p>I completed my undergraduate degree in Electrical and Electronics Engineering in 2017. After graduation, I joined Cyient as a Software Design Engineer, where I worked extensively with large datasets related to transportation schematic components. This role introduced me to the power of data and automation in solving complex engineering problems.</p>
+                    
+                    <p>A pivotal moment in my career came when I witnessed the transformative impact of code developed by my tech lead - Excel VBA macros that reduced work from hours to seconds. This experience sparked my fascination with how intelligent automation could revolutionize workflows and solve real-world challenges at scale.</p>
+                    
+                    <p>My interest in AI deepened as I began working on prediction models, seeing firsthand how machine learning could extract insights from complex datasets. This inspired me to pursue a Master's in Information Technology in 2024, where I formalized my understanding of AI/ML concepts and techniques.</p>
+                    
+                    <p>Following my academic journey, I worked as a Machine Learning Fellow at Fellowship AI, where I learned fascinating things about AI agents and their applications. This experience exposed me to cutting-edge developments in the field and reinforced my passion for building intelligent systems that can adapt and learn.</p>
+                    
+                    <p>Currently, I'm working as an AI Python Engineer at Narwal, where I'm applying my skills across diverse domains and technical challenges. This role allows me to see AI's transformative potential across different industries.</p>
+                    
+                    <p>I'm passionate about building intelligent systems that solve real-world problems and am always excited to discuss challenging projects, emerging technologies, and innovative applications of AI/ML.</p>
+                </div>
+            </section>
 
-        
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+            <section>
+                <h2 class="section-title">Current Projects</h2>
+                <div class="section-content">
+                    <p><strong>Healthcare Revenue Cycle Management (RCM) AI:</strong></p>
+                    <p>Developing intelligent systems to streamline healthcare billing processes, reduce manual errors, and improve revenue collection efficiency. Working with complex healthcare data to identify patterns and automate decision-making workflows.</p>
+                    
+                    <p><strong>Invoice Extractor using Deep Learning:</strong></p>
+                    <p>Built an end-to-end document processing system that extracts key information from invoices using computer vision and NLP techniques. Implemented using deep learning models for accurate text detection, extraction, and classification across various invoice formats.</p>
+                    
+                    <p><strong>AI for Software Development Lifecycle:</strong></p>
+                    <p>Currently developing AI-powered tools to enhance the software development process. Exploring applications in code generation, automated testing, bug detection, and development workflow optimization to improve developer productivity.</p>
+                    
+                    <p><strong>Previous Work:</strong></p>
+                    <p>• Transportation schematic data analysis and prediction models at Cyient</p>
+                    <p>• AI agents research and development during Fellowship AI program</p>
+                    <p>• Various machine learning projects during Master's program</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Technical Writing</h2>
+                <div class="section-content">
+                    <p>I believe in sharing knowledge and documenting my learning journey through technical writing. Writing helps me solidify my understanding of complex concepts while contributing to the broader AI/ML community.</p>
+                    
+                    <p><strong>Upcoming Medium Blog Series:</strong></p>
+                    <p>I'm planning to start writing on Medium, focusing on practical AI/ML implementations and lessons learned from real-world projects. Topics will include deep learning for document processing, healthcare AI applications, and AI integration in software development workflows.</p>
+                    
+                    <p><strong>Writing Focus Areas:</strong></p>
+                    <p>• Practical implementation guides for AI/ML projects</p>
+                    <p>• Lessons learned from transitioning into AI from traditional engineering</p>
+                    <p>• Deep dives into specific techniques used in my projects</p>
+                    <p>• Industry applications of AI across healthcare, fintech, and software development</p>
+                    
+                    <p>Stay tuned for detailed walkthroughs of my projects and insights from working across different AI domains!</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Learning Approach</h2>
+                <div class="section-content">
+                    <p><strong>Foundation Building:</strong> Started with core ML concepts through [courses/books you've used] and reinforced learning through implementation.</p>
+                    
+                    <p><strong>Project-Driven Learning:</strong> Focus on building end-to-end solutions rather than just following tutorials. Each project teaches me something new about the ML workflow.</p>
+                    
+                    <p><strong>Community Engagement:</strong> Active in [communities you're part of - Kaggle, GitHub, Twitter ML community, local meetups] to learn from others and share my progress.</p>
+                    
+                    <p><strong>Continuous Growth:</strong> Currently working through [what you're studying now] while building [current project focus] to deepen both theoretical understanding and practical skills.</p>
+                </div>
+            </section>
+
+            <div class="links-section">
+                <p>You can find my work and writing in the following places:</p>
+                
+                <div class="links-grid">
+                    <div class="link-item">
+                        <a href="#">GitHub</a>
+                        <span class="link-description">- Project repositories and code samples</span>
+                    </div>
+                    <div class="link-item">
+                        <a href="#">Medium Blog</a>
+                        <span class="link-description">- Technical writing and project insights</span>
+                    </div>
+                    <div class="link-item">
+                        <a href="#">LinkedIn</a>
+                        <span class="link-description">- Professional background and experience</span>
+                    </div>
+                    <div class="link-item">
+                        <a href="#">Resume</a>
+                        <span class="link-description">- Detailed background and qualifications</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-title">Quick Navigation</div>
+            <ul class="sidebar-links">
+                <li><a href="#story">My Story</a></li>
+                <li><a href="#writing">Technical Writing</a></li>
+                <li><a href="#links">Links & Contact</a></li>
+            </ul>
+        </aside>
+    </div>
+</body>
 </html>
