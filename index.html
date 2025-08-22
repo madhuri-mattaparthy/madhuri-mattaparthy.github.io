@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Madhuri Mattaparthy's Portfolio</title>
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -244,9 +248,7 @@
         <nav>
           <ul class="nav-links">
             <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Journey</a></li>
-            <li><a href="#">Writing</a></li>
+            <li><a href="projects.html">Projects</a></li>
           </ul>
         </nav>
         <div class="social-icons">
@@ -288,7 +290,7 @@
           working on. If anything here interests you, I'd love to hear from you!
         </div>
 
-        <section>
+        <section id="story">
           <h2 class="section-title">My Story</h2>
           <div class="section-content">
             <p>
@@ -373,7 +375,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="writing">
           <h2 class="section-title">Technical Writing</h2>
           <div class="section-content">
             <p>
@@ -399,12 +401,12 @@
           </div>
         </section>
 
-        <div class="links-section">
+        <div class="links-section" id="links">
           <p>You can find my work and writing in the following places:</p>
 
           <div class="links-grid">
             <div class="link-item">
-              <a href="#">GitHub</a>
+              <a href="https://github.com/madhuri-mattaparthy">GitHub</a>
               <span class="link-description"
                 >- Project repositories and code samples</span
               >
@@ -416,17 +418,19 @@
               >
             </div>
             <div class="link-item">
-              <a href="#">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/madhurimattaparthy/"
+                >LinkedIn</a
+              >
               <span class="link-description"
                 >- Professional background and experience</span
               >
             </div>
-            <div class="link-item">
+            <!-- <div class="link-item">
               <a href="#">Resume</a>
               <span class="link-description"
                 >- Detailed background and qualifications</span
               >
-            </div>
+            </div> -->
           </div>
         </div>
       </main>
