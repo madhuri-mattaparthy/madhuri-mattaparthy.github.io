@@ -67,12 +67,23 @@
       .social-icons {
         display: flex;
         gap: 1rem;
+        align-items: center;
       }
 
       .social-icons a {
         color: #888;
-        font-size: 1.2rem;
         transition: color 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+        line-height: 1;
+      }
+
+      .social-icons a svg {
+        width: 18px;
+        height: 18px;
+        vertical-align: middle;
       }
 
       .social-icons a:hover {
@@ -239,10 +250,23 @@
           </ul>
         </nav>
         <div class="social-icons">
-          <a href="#">🐙</a>
-          <a href="#">💼</a>
-          <a href="#">📧</a>
-          <a href="#">🔍</a>
+          <a href="https://github.com/madhuri-mattaparthy" title="GitHub">
+            <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-.9.08-1.88 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44.98.16 1.68.08 1.88.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://linkedin.com/in/madhuri-mattaparthy"
+            title="LinkedIn"
+          >
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M2.5 18h3V8.3h-3V18zM4 6.9c-1 0-1.8-.8-1.8-1.8S3 3.2 4 3.2s1.8.8 1.8 1.8S5 6.9 4 6.9zM18.2 18H15v-5.2c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V18h-3.2V8.3h3.1v1.3c.4-.8 1.4-1.6 2.9-1.6 3.1 0 3.7 2 3.7 4.6V18h-.4z"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </header>
@@ -363,7 +387,14 @@
             <p>
               I'm planning to start writing on Medium, focusing on practical
               AI/ML implementations and lessons learned from real-world
-              projects.
+              projects. Topics will include deep learning for document
+              processing, healthcare AI applications, and AI integration in
+              software development workflows.
+            </p>
+
+            <p>
+              Stay tuned for detailed walkthroughs of my projects and insights
+              from working across different AI domains!
             </p>
           </div>
         </section>
